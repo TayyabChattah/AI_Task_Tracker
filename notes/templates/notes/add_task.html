@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f7fb;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 40px 40px 40px;
+        }
+        h1 {
+            color: #3b3b4f;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            color: #4f8cff;
+            font-weight: 500;
+        }
+        input[type="text"], textarea {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            margin-bottom: 18px;
+            font-size: 1em;
+            background: #f0f4fa;
+        }
+        button {
+            padding: 10px 22px;
+            background: #4f8cff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #3465a4;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 22px;
+            background: #aaa;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        a.button:hover {
+            background: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New Task</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Title:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+    <br>
+    <a href="{% url 'task_list' %}">Back to Task List</a>
+</body>
+</html>
