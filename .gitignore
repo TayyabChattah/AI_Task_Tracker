@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Vercel
+.vercel/
+
+# IDEs
+.idea/
+*.iml
+
+# Node
+node_modules/
+
+# Test coverage
+htmlcov/
+.coverage
+.tox/
+
+# Misc
+*.bak
+*.swp
+*.tmp
