@@ -80,7 +80,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.parse(
-        'postgresql://postgres:Chattah00@7@db.nedifesaljgmewogvhil.supabase.co:5432/postgres'
+        'postgresql://postgres.nedifesaljgmewogvhil:Chattah00@7@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres'
     )
 }
 
@@ -128,4 +128,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # .env
 GEMINI_API_KEY="AIzaSyAikGbqL57_N4gMp1W_q4I9WwhjhGuKPNc"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
